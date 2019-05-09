@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SmartApp</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body style="background-color:#dfe2e1;">
+	<div class="container">
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+			  <a style="color:white;" class="navbar-brand" href="#"><b>SmartApp</b></a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			</nav>
+		</header>
+		<div class="container" style="border: 5px solid black;">
+			<div class="row" style="padding:0 20%; ">
+				<form class="col-md-12" method="POST" action="/userAc"  style="margin:3% 0;">
+				  <div class="form-group">
+				      <label for="inputAC">AC</label>
+				      <select id="inputAC" class="form-control" name="userAc">
+				      		<% if(valAc == 3){%>
+					        	<option value="3" selected>Choose...</option>
+					        <%}else{%>
+					        	<option value="3">Choose...</option>
+					        <%}%>
+					        <% if(valAc == 1){%>
+					        	<option value="1" selected>ON</option>
+					        <%}else{%>
+					        	<option value="1">ON</option>
+					        <%}%>	
+					        <% if(valAc == 0){%>
+					        	<option value="0" selected>OFF</option>
+					        <%}else{%>
+					        	<option value="0">OFF</option>
+					        <%}%>	
+					        <% if(valAc == 2){%>
+					        	<option value="2" selected>Smart</option>
+					        <%}else{%>
+					        	<option value="2">Smart</option>
+					        <%}%>	
+				      </select>
+				  </div>
+				  <button type="submit" class="btn btn-primary btn-sm">Submit</button><br>
+				</form>
+				<form class="col-md-12" method="POST" action="/userLight"> 
+				  <div class="form-group">
+				      <label for="inputLight">Light</label>
+				      <select id="inputLight" class="form-control" name="userLight">
+				      		<% if(valLight == 3){%>
+					        	<option value="3" selected>Choose...</option>
+					        <%}else{%>
+					        	<option value="3">Choose...</option>
+					        <%}%>
+					        <% if(valLight == 1){%>
+					        	<option value="1" selected>ON</option>
+					        <%}else{%>
+					        	<option value="1">ON</option>
+					        <%}%>	
+					        <% if(valLight == 0){%>
+					        	<option value="0" selected>OFF</option>
+					        <%}else{%>
+					        	<option value="0">OFF</option>
+					        <%}%>	
+					        <% if(valLight == 2){%>
+					        	<option value="2" selected>Smart</option>
+					        <%}else{%>
+					        	<option value="2">Smart</option>
+					        <%}%>
+				      </select>
+				  </div>
+				  <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+				</form>
+				<br>
+			</div>
+			<div class="row" style="padding:0 20%;">
+				<form class="col-md-12" method="POST" action="/userCurtain" style="margin:1% 0;">
+				  <div class="form-group">
+				      <label for="inputCurtain">Curatin</label>
+				      <select id="inputCurtain" class="form-control" name="userCurtain">
+				      		<% if(valCurtain == 3){%>
+					        	<option value="3" selected>Choose...</option>
+					        <%}else{%>
+					        	<option value="3">Choose...</option>
+					        <%}%>
+					        <% if(valCurtain == 1){%>
+					        	<option value="1" selected>Open</option>
+					        <%}else{%>
+					        	<option value="1">Open</option>
+					        <%}%>	
+					        <% if(valCurtain == 0){%>
+					        	<option value="0" selected>Close</option>
+					        <%}else{%>
+					        	<option value="0">Close</option>
+					        <%}%>	
+					        <% if(valCurtain == 2){%>
+					        	<option value="2" selected>Smart</option>
+					        <%}else{%>
+					        	<option value="2">Smart</option>
+					        <%}%>
+				      </select>
+				  </div>
+				  <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+				</form>
+			</div>	
+			<br>
+		</div>
+	</div>	
+</body>
+</html>
